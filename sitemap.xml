@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://losdragos.club/</loc><priority>1.0</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://losdragos.club/blog/</loc><priority>0.9</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://losdragos.club/blog/posts/how-to-hit-the-perfect-bandeja.html</loc><priority>0.7</priority><changefreq>never</changefreq></url>
+  <!-- Add new pages here when you publish them -->
+</urlset>
