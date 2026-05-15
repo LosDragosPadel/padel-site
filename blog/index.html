@@ -88,15 +88,13 @@
 </div>
 
 <!-- BLOG GRID -->
-<!-- ═══════════════════════════════════════════════════════════
+<!-- 
      HOW TO ADD A NEW BLOG POST:
-     1. Duplicate one article block below (<!-- ARTICLE --> comment)
+     1. Duplicate one article block below
      2. Update: data-category, href, title, date, read time, excerpt
      3. Add a matching post file in /blog/posts/your-post-slug.html
-        (copy _post-template.html and fill it in)
-     4. For a real image, replace the emoji placeholder div with:
-        <img src="/images/blog/your-image.jpg" alt="description" />
-     ════════════════════════════════════════════════════════════ -->
+     4. For a real image replace the emoji div with an img tag
+-->
 <section class="section" aria-labelledby="blog-heading">
   <div class="inner">
     <h2 id="blog-heading" class="sr-only">Blog Posts</h2>
@@ -226,7 +224,7 @@
     </div>
     <div class="footer-col"><h4>Club</h4><ul><li><a href="/index.html#vision">About</a></li><li><a href="/index.html#experience">Experience</a></li><li><a href="/index.html#packages">Holiday Packages</a></li><li><a href="/index.html#contact">Memberships</a></li></ul></div>
     <div class="footer-col"><h4>Content</h4><ul><li><a href="/blog/">Blog</a></li><li><a href="/blog/#technique">Technique Tips</a></li><li><a href="/blog/#news">Club News</a></li></ul></div>
-    <div class="footer-col"><h4>Connect</h4><ul><li><a href="mailto:francescamanuel@hotmail.com">Email Us</a></li><li><a href="https://www.instagram.com/losdragospadel" target="_blank" rel="noopener noreferrer">Instagram</a></li><li><a href="https://www.tiktok.com/@losdragospadel" target="_blank" rel="noopener noreferrer">TikTok</a></li><li><a href="https://www.youtube.com/@losdragospadel" target="_blank" rel="noopener noreferrer">YouTube</a></li></ul></div>
+    <div class="footer-col"><h4>Connect</h4><ul><li><a href="mailto:losdragospadel@gmail.com">Email Us</a></li><li><a href="https://www.instagram.com/losdragospadel" target="_blank" rel="noopener noreferrer">Instagram</a></li><li><a href="https://www.tiktok.com/@losdragospadel" target="_blank" rel="noopener noreferrer">TikTok</a></li><li><a href="https://www.youtube.com/@losdragospadel" target="_blank" rel="noopener noreferrer">YouTube</a></li></ul></div>
   </div>
   <div class="footer-bottom">
     <p class="footer-copy">© 2026 Club de Padel Los Dragos – Limassol, Cyprus. All rights reserved.</p>
@@ -240,6 +238,16 @@
 
 <script src="/js/main.js"></script>
 <script>
+  // Close mobile nav on any link click (belt and braces for blog page)
+  document.addEventListener('DOMContentLoaded', () => {
+    const chk = document.getElementById('nav-chk');
+    if (chk) {
+      document.querySelectorAll('.nav-links a').forEach(a => {
+        a.addEventListener('click', () => { chk.checked = false; });
+      });
+    }
+  });
+
   // Blog category filter
   document.querySelectorAll('.filter-btn').forEach(btn => {
     btn.addEventListener('click', () => {
