@@ -407,11 +407,24 @@ footer#site-footer {
   #nav-chk:checked ~ .nav-links {
     display: flex; flex-direction: column;
     position: fixed; inset: 0;
-    background: rgba(8,8,8,0.97);
+    background: #0a0a0a;
     justify-content: center; align-items: center;
     gap: 2rem; z-index: 195;
+    padding: 2rem;
   }
-  #nav-chk:checked ~ .nav-links a { font-size: 1.8rem; }
+  #nav-chk:checked ~ .nav-links a {
+    font-size: 1.8rem;
+    color: var(--text);
+    padding: .5rem 1rem;
+  }
+  #nav-chk:checked ~ .nav-links a:hover,
+  #nav-chk:checked ~ .nav-links a.active { color: var(--gold); }
+  #nav-chk:checked ~ .nav-links .nav-cta {
+    border: 1px solid var(--gold);
+    color: var(--gold) !important;
+    margin-top: 1rem;
+    padding: .7rem 2rem;
+  }
 
   .stats-band { grid-template-columns: repeat(2, 1fr); }
   .stat-item:nth-child(2) { border-right: none; }
@@ -568,4 +581,3 @@ nav#site-nav { transition: height .3s ease, background .3s ease; }
   .feature-strip-item { border-right: none; border-bottom: 1px solid var(--border); }
   .info-bar { gap: 1.5rem; }
 }
-
